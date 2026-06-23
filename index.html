@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="description" content="John Doe — Freelance Software Developer. Costruisco prodotti digitali veloci, scalabili e curati nei dettagli." />
+  <title>John Doe — Freelance Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 3D background canvas (fixed behind everything) -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="John Doe — home">
+        <span class="nav__logo-mark">JD</span>
+        <span class="nav__logo-text">John&nbsp;Doe</span>
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Navigazione principale">
+        <a href="#about">Chi sono</a>
+        <a href="#services">Servizi</a>
+        <a href="#work">Progetti</a>
+        <a href="#contact" class="nav__cta">Lavoriamo insieme</a>
+      </nav>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Freelance Software Developer</p>
+        <h1 class="hero__title reveal">
+          Ciao, sono <span class="accent">John&nbsp;Doe</span>.<br />
+          Costruisco software<br />che <span class="accent">funziona</span>.
+        </h1>
+        <p class="hero__lead reveal">
+          Trasformo idee complesse in prodotti digitali veloci, scalabili e curati nei
+          minimi dettagli — dal frontend all'infrastruttura cloud.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--primary">Inizia un progetto</a>
+          <a href="#work" class="btn btn--ghost">Guarda i lavori</a>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scorri verso il basso">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__intro reveal">
+          <span class="section__label">01 — Chi sono</span>
+          <h2 class="section__title">Un partner tecnico, non solo un fornitore di codice.</h2>
+          <p>
+            Sono uno sviluppatore software full-stack con oltre 8 anni di esperienza
+            nel portare prodotti dalla lavagna alla produzione. Lavoro con startup e
+            aziende che hanno bisogno di qualcuno che capisca tanto il <em>perché</em> del
+            business quanto il <em>come</em> dell'implementazione.
+          </p>
+          <p>
+            Il mio approccio è semplice: codice pulito, comunicazione trasparente e
+            consegne che rispettano i tempi. Niente sorprese, solo risultati.
+          </p>
+        </div>
+
+        <ul class="about__stats reveal">
+          <li>
+            <span class="about__stat-num" data-count="8">0</span><span class="accent">+</span>
+            <span class="about__stat-label">Anni di esperienza</span>
+          </li>
+          <li>
+            <span class="about__stat-num" data-count="60">0</span><span class="accent">+</span>
+            <span class="about__stat-label">Progetti consegnati</span>
+          </li>
+          <li>
+            <span class="about__stat-num" data-count="30">0</span><span class="accent">+</span>
+            <span class="about__stat-label">Clienti soddisfatti</span>
+          </li>
+          <li>
+            <span class="about__stat-num" data-count="99">0</span><span class="accent">%</span>
+            <span class="about__stat-label">Tasso di rinnovo</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__label">02 — Servizi</span>
+          <h2 class="section__title">Cosa posso fare per te</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Sviluppo Web</h3>
+            <p>Applicazioni web moderne e performanti con React, Vue e Node.js. SPA, dashboard e piattaforme su misura.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9729;</div>
+            <h3>Architettura Cloud</h3>
+            <p>Infrastrutture scalabili su AWS e GCP. Container, CI/CD e automazione per deploy senza stress.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9636;</div>
+            <h3>API &amp; Backend</h3>
+            <p>API REST e GraphQL robuste, database ottimizzati e microservizi pensati per crescere con te.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9889;</div>
+            <h3>Performance &amp; Audit</h3>
+            <p>Analisi e ottimizzazione di applicazioni esistenti: velocità, sicurezza e qualità del codice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section work" id="work">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__label">03 — Progetti</span>
+          <h2 class="section__title">Lavori selezionati</h2>
+        </div>
+
+        <div class="work__grid">
+          <article class="project reveal">
+            <div class="project__tag">SaaS · Fintech</div>
+            <h3>Nimbus Pay</h3>
+            <p>Piattaforma di pagamenti B2B con dashboard real-time e riconciliazione automatica.</p>
+            <div class="project__stack"><span>React</span><span>Node</span><span>PostgreSQL</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">Mobile · Health</div>
+            <h3>Pulse</h3>
+            <p>App di monitoraggio benessere con sincronizzazione device e analisi predittive.</p>
+            <div class="project__stack"><span>React Native</span><span>GraphQL</span><span>AWS</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">E-commerce</div>
+            <h3>Atelier</h3>
+            <p>Headless storefront ad alte prestazioni con checkout personalizzato e CMS dinamico.</p>
+            <div class="project__stack"><span>Next.js</span><span>Stripe</span><span>Vercel</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="project__tag">Tooling · DevOps</div>
+            <h3>Forge CLI</h3>
+            <p>Strumento da riga di comando per automatizzare il provisioning di ambienti cloud.</p>
+            <div class="project__stack"><span>Go</span><span>Terraform</span><span>Docker</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <span class="section__label">04 — Contatti</span>
+          <h2 class="section__title">Hai un'idea? Parliamone.</h2>
+          <p>
+            Raccontami il tuo progetto e ti risponderò entro 24 ore con i prossimi passi.
+            Nessun impegno, solo una chiacchierata onesta su come posso aiutarti.
+          </p>
+          <ul class="contact__meta">
+            <li><span class="accent">Email</span> hello@johndoe.dev</li>
+            <li><span class="accent">Sede</span> Remote · Europa</li>
+            <li><span class="accent">Disponibilità</span> Aperto a nuovi progetti</li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Mario Rossi" required />
+            <span class="field__error" data-for="name"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="mario@azienda.com" required />
+            <span class="field__error" data-for="email"></span>
+          </div>
+          <div class="field">
+            <label for="subject">Oggetto</label>
+            <input type="text" id="subject" name="subject" placeholder="Nuovo progetto web" required />
+            <span class="field__error" data-for="subject"></span>
+          </div>
+          <div class="field">
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" rows="5" placeholder="Parlami del tuo progetto..." required></textarea>
+            <span class="field__error" data-for="message"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" id="submit-btn">Invia richiesta</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">JD</span>
+      <p>&copy; <span id="year"></span> John Doe. Costruito con Three.js &amp; troppa caffeina.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="X">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
