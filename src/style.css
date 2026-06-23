@@ -24,6 +24,7 @@
   /* Type */
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
+  --font-roboto: 'Roboto', system-ui, sans-serif;
 
   /* Layout */
   --container: 1180px;
@@ -109,7 +110,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   align-items: center;
   justify-content: space-between;
 }
-.nav__logo { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-weight: 700; }
+.nav__logo { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-roboto); font-weight: 700; }
 .nav__logo-mark {
   display: grid; place-items: center;
   width: 38px; height: 38px;
