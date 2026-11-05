@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0a0a0f" />
-  <meta name="description" content="Enrico Bergamini — Freelance Software Developer. Costruisco prodotti digitali veloci, scalabili e curati nei dettagli." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="description" content="Enrico Bergamini, sviluppatore software freelance. Applicazioni web, gestionali su misura e integrazioni tra sistemi per aziende." />
   <title>Enrico Bergamini — Freelance Software Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- 3D background canvas (fixed behind everything) -->
@@ -20,7 +24,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#hero" class="nav__logo" aria-label="Enrico Bergamini — home">
-        <span class="nav__logo-mark">EB</span>
+        <img class="nav__logo-mark" src="/img/logo-eb.png" alt="" width="168" height="120" />
         <span class="nav__logo-text">Enrico&nbsp;Bergamini</span>
       </a>
 
@@ -28,7 +32,7 @@
         <a href="#about">Chi sono</a>
         <a href="#services">Servizi</a>
         <a href="#work">Progetti</a>
-        <a href="#contact" class="nav__cta">Lavoriamo insieme</a>
+        <a href="#contact" class="nav__cta">Contattami</a>
       </nav>
 
       <button class="nav__toggle" id="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-links">
@@ -43,16 +47,16 @@
       <div class="hero__content">
         <p class="hero__eyebrow reveal">Freelance Software Developer</p>
         <h1 class="hero__title reveal">
-          Ciao, sono <span class="accent">Enrico&nbsp;Bergamini</span>.<br />
-          Costruisco software<br />che <span class="accent">funziona</span>.
+          Sono <span class="accent">Enrico&nbsp;Bergamini</span>,<br />
+          sviluppo software<br />su misura per le aziende.
         </h1>
         <p class="hero__lead reveal">
-          Trasformo idee complesse in prodotti digitali veloci, scalabili e curati nei
-          minimi dettagli — dal frontend all'infrastruttura cloud.
+          Applicazioni web, gestionali e integrazioni tra sistemi: dall'analisi dei
+          requisiti al rilascio in produzione.
         </p>
         <div class="hero__actions reveal">
-          <a href="#contact" class="btn btn--primary">Inizia un progetto</a>
-          <a href="#work" class="btn btn--ghost">Guarda i lavori</a>
+          <a href="#contact" class="btn btn--primary">Parliamo del progetto</a>
+          <a href="#work" class="btn btn--ghost">Vedi i progetti</a>
         </div>
       </div>
 
@@ -67,37 +71,24 @@
       <div class="container about__grid">
         <div class="about__intro reveal">
           <span class="section__label">01 — Chi sono</span>
-          <h2 class="section__title">Un partner tecnico, non solo un fornitore di codice.</h2>
+          <h2 class="section__title">Software costruito attorno ai processi aziendali.</h2>
           <p>
-            Sono uno sviluppatore software full-stack con oltre 8 anni di esperienza
-            nel portare prodotti dalla lavagna alla produzione. Lavoro con startup e
-            aziende che hanno bisogno di qualcuno che capisca tanto il <em>perché</em> del
-            business quanto il <em>come</em> dell'implementazione.
+            Sono uno sviluppatore full-stack con oltre 4 anni di esperienza. Lavoro con
+            aziende e startup seguendo i progetti dall'analisi iniziale al rilascio, con
+            attenzione sia alla parte tecnica sia ai <em>processi</em> che il software
+            deve supportare.
           </p>
           <p>
-            Il mio approccio è semplice: codice pulito, comunicazione trasparente e
-            consegne che rispettano i tempi. Niente sorprese, solo risultati.
+            Scrivo codice manutenibile, aggiorno il cliente sull'avanzamento del lavoro
+            e concordo fin dall'inizio tempi realistici.
           </p>
         </div>
 
-        <ul class="about__stats reveal">
-          <li>
-            <span class="about__stat-num" data-count="8">0</span><span class="accent">+</span>
-            <span class="about__stat-label">Anni di esperienza</span>
-          </li>
-          <li>
-            <span class="about__stat-num" data-count="60">0</span><span class="accent">+</span>
-            <span class="about__stat-label">Progetti consegnati</span>
-          </li>
-          <li>
-            <span class="about__stat-num" data-count="30">0</span><span class="accent">+</span>
-            <span class="about__stat-label">Clienti soddisfatti</span>
-          </li>
-          <li>
-            <span class="about__stat-num" data-count="99">0</span><span class="accent">%</span>
-            <span class="about__stat-label">Tasso di rinnovo</span>
-          </li>
-        </ul>
+        <figure class="about__photo reveal">
+          <div class="about__photo-frame">
+            <img src="/img/enrico-bergamini.jpg" alt="Ritratto di Enrico Bergamini" width="900" height="900" loading="lazy" decoding="async" />
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -106,34 +97,34 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">02 — Servizi</span>
-          <h2 class="section__title">Cosa posso fare per te</h2>
+          <h2 class="section__title">Di cosa mi occupo</h2>
         </div>
 
         <div class="cards">
           <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">&#9635;</div>
-            <h3>Siti e Applicazioni Web</h3>
-            <p>Siti web e applicazioni online veloci, curati e facili da usare: dalla vetrina aziendale alle piattaforme su misura per il tuo lavoro.</p>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <h3>Siti e applicazioni web</h3>
+            <p>Siti aziendali e applicazioni web su misura, pensati per essere veloci, accessibili e semplici da gestire.</p>
           </article>
           <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">&#9783;</div>
-            <h3>Gestionali su Misura</h3>
-            <p>Programmi gestionali costruiti intorno alle tue esigenze, per organizzare clienti, ordini, magazzino e attività senza fogli di calcolo sparsi.</p>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/><path d="M4.5 5.5v13c0 1.38 3.36 2.5 7.5 2.5s7.5-1.12 7.5-2.5v-13"/><path d="M4.5 12c0 1.38 3.36 2.5 7.5 2.5s7.5-1.12 7.5-2.5"/></svg></div>
+            <h3>Gestionali su misura</h3>
+            <p>Software gestionali costruiti sui processi dell'azienda: clienti, ordini, magazzino e attività in un unico sistema, al posto di fogli di calcolo separati.</p>
           </article>
           <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">&#8644;</div>
-            <h3>Integrazioni tra Sistemi</h3>
-            <p>Collego i programmi che già usi in azienda così che dialoghino tra loro, eliminando doppi inserimenti e dati che non tornano.</p>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></svg></div>
+            <h3>Integrazioni tra sistemi</h3>
+            <p>Collegamento tra i software già in uso in azienda, per evitare inserimenti doppi e dati non allineati.</p>
           </article>
           <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">&#9788;</div>
-            <h3>Applicazioni con Intelligenza Artificiale</h3>
-            <p>Soluzioni basate sull'AI per automatizzare attività ripetitive, analizzare documenti e dati e supportare le tue decisioni.</p>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><path d="M10 10h4v4h-4zM9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21"/></svg></div>
+            <h3>Applicazioni con intelligenza artificiale</h3>
+            <p>Strumenti basati sull'AI per automatizzare attività ripetitive, estrarre informazioni da documenti e dati e supportare le decisioni.</p>
           </article>
           <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">&#10142;</div>
-            <h3>Digitalizzazione dei Processi</h3>
-            <p>Consulenza e sviluppo per trasformare procedure manuali e cartacee in flussi digitali semplici, ordinati e più veloci.</p>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v3.5a3 3 0 0 0 3 3H14"/></svg></div>
+            <h3>Digitalizzazione dei processi</h3>
+            <p>Analisi e sviluppo per trasformare procedure manuali e cartacee in flussi digitali più semplici e rapidi.</p>
           </article>
         </div>
       </div>
@@ -144,32 +135,32 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">03 — Progetti</span>
-          <h2 class="section__title">Lavori selezionati</h2>
+          <h2 class="section__title">Alcuni progetti</h2>
         </div>
 
         <div class="work__grid">
           <article class="project reveal">
             <div class="project__tag">SaaS · Healthcare</div>
             <h3>Med Data Hub</h3>
-            <p>Gestionale avanzato per la gestione dati compliant alle normative mediche per aziende produttrici di dispositivi medici.</p>
+            <p>Gestionale per la gestione dei dati in conformità al regolamento sui dispositivi medici, per aziende produttrici del settore.</p>
             <div class="project__stack"><span>MDR</span><span>Multi-tenant</span><span>Cloud</span></div>
           </article>
           <article class="project reveal">
             <div class="project__tag">Desktop · Healthcare</div>
             <h3>Gestione fornitori</h3>
-            <p>App di consultazione e gestione dei fornitori per aziende del settore sanitario.</p>
+            <p>Applicazione desktop per consultare e gestire i fornitori, sviluppata per aziende del settore sanitario.</p>
             <div class="project__stack"><span>Ricerca avanzata</span><span>Gestione documentale</span><span>Cross-platform</span></div>
           </article>
           <article class="project reveal">
             <div class="project__tag">Business Intelligence</div>
             <h3>BetterSet</h3>
-            <p>Plugin per l'integrazione di dati di business intelligence in applicazioni web.</p>
-            <div class="project__stack"><span>Dashboards</span><span>No-code</span><span>KPI</span></div>
+            <p>Plugin per integrare dashboard e indicatori di business intelligence all'interno di applicazioni web.</p>
+            <div class="project__stack"><span>Dashboard</span><span>No-code</span><span>KPI</span></div>
           </article>
           <article class="project reveal">
             <div class="project__tag">SAP</div>
             <h3>Integrazione SAP</h3>
-            <p>Integrazione per sincronizzazione dati tra sistemi SAP e database applicativi.</p>
+            <p>Sincronizzazione automatica dei dati tra sistemi SAP e i database delle applicazioni aziendali.</p>
             <div class="project__stack"><span>Sync automatico</span><span>ERP</span></div>
           </article>
         </div>
@@ -181,15 +172,15 @@
       <div class="container contact__grid">
         <div class="contact__intro reveal">
           <span class="section__label">04 — Contatti</span>
-          <h2 class="section__title">Hai un'idea? Parliamone.</h2>
+          <h2 class="section__title">Parliamo del tuo progetto.</h2>
           <p>
-            Raccontami il tuo progetto e ti risponderò entro 24 ore con i prossimi passi.
-            Nessun impegno, solo una chiacchierata onesta su come posso aiutarti.
+            Descrivi brevemente il progetto o l'esigenza: ti rispondo entro 24 ore per
+            fissare un primo confronto, senza impegno.
           </p>
           <ul class="contact__meta">
             <li><span class="accent">Email</span> enricobergamini@outlook.it</li>
-            <li><span class="accent">Sede</span> Remote · Europa</li>
-            <li><span class="accent">Disponibilità</span> Aperto a nuovi progetti</li>
+            <li><span class="accent">Sede</span> Mirandola (MO) · anche da remoto</li>
+            <li><span class="accent">Disponibilità</span> Disponibile per nuovi progetti</li>
           </ul>
         </div>
 
@@ -211,7 +202,7 @@
           </div>
           <div class="field">
             <label for="message">Messaggio</label>
-            <textarea id="message" name="message" rows="5" placeholder="Parlami del tuo progetto..." required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Descrivi brevemente il progetto…" required></textarea>
             <span class="field__error" data-for="message"></span>
           </div>
           <button type="submit" class="btn btn--primary btn--block" id="submit-btn">Invia richiesta</button>
@@ -223,16 +214,17 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__logo">EB</span>
+      <img class="footer__logo" src="/img/logo-eb.png" alt="" width="168" height="120" />
       <p>&copy; <span id="year"></span> Enrico Bergamini - Mirandola (MO) - P.IVA 04266960360</p>
       <div class="footer__socials">
-        <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="X">X</a>
+        <a href="https://www.github.com/enricoberg" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/enrico-bergamini" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

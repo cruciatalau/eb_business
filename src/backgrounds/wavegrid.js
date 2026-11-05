@@ -36,7 +36,7 @@ const FRAG = /* glsl */ `
     float dist = clamp((vWorld.z + 22.0) / 30.0, 0.0, 1.0);
     float elev = smoothstep(-0.3, 1.1, vElev);
     vec3 col = mix(uColorFar, uColorNear, elev);
-    float alpha = dist * (0.22 + elev * 0.65);
+    float alpha = dist * (0.18 + elev * 0.55);
     gl_FragColor = vec4(col, alpha);
   }
 `
@@ -73,7 +73,7 @@ export function createWaveGrid({ isMobile }) {
     scene,
     camera,
     clearColor: 0x07070b,
-    bloom: { strength: isMobile ? 0.26 : 0.42, radius: 0.7, threshold: 0.12 },
+    bloom: { strength: isMobile ? 0.22 : 0.34, radius: 0.65, threshold: 0.14 },
     update(elapsed, pointer) {
       // The waves travel continuously inside the shader (the `+ uTime` term),
       // so motion stays perfectly smooth without snapping the mesh position.

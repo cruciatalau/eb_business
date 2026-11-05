@@ -1,6 +1,6 @@
 /* ============================================================
    UI logic: navbar, scroll reveal, stat counters, contact form
-   (frontend-only demo) and the Three.js hero init.
+   (sent via EmailJS) and the Three.js hero init.
    ============================================================ */
 
 import './style.css'
@@ -84,7 +84,16 @@ function runCounters(scope) {
   })
 }
 
-/* ---------- Contact form (frontend-only demo) ---------- */
+/* ---------- Contact form (EmailJS) ---------- */
+// EmailJS public key is meant to be exposed client-side; restrict the allowed
+// origins in the EmailJS dashboard (Account → Security) to prevent abuse.
+const EMAILJS = {
+  publicKey: 'fImHDY0dLx--mOF3X',
+  serviceId: 'default_service',
+  templateId: 'template_lxkx4em'
+}
+if (window.emailjs) window.emailjs.init({ publicKey: EMAILJS.publicKey })
+
 const form = document.getElementById('contact-form')
 const statusEl = document.getElementById('form-status')
 const submitBtn = document.getElementById('submit-btn')
@@ -118,7 +127,7 @@ Object.keys(validators).forEach((name) => {
   })
 })
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault()
   statusEl.textContent = ''
   statusEl.className = 'form__status'
@@ -130,17 +139,37 @@ form.addEventListener('submit', (e) => {
     return
   }
 
-  // --- DEMO ONLY: no real request is sent. ---
-  // To make this live, POST `new FormData(form)` to a service like
-  // Formspree/EmailJS or your own endpoint here.
+  const data = new FormData(form)
+  const name = data.get('name').trim()
+  const email = data.get('email').trim()
+  const subject = data.get('subject').trim()
+  const message = data.get('message').trim()
+
   submitBtn.disabled = true
   submitBtn.textContent = 'Invio in corso…'
 
-  setTimeout(() => {
+  try {
+    if (!window.emailjs) throw new Error('EmailJS SDK not loaded')
+    // Send this form's field names plus the ones used by the old site's form
+    // (username/object), so the existing template works either way.
+    await window.emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, {
+      name,
+      username: name,
+      email,
+      reply_to: email,
+      subject,
+      object: subject,
+      message
+    })
+    form.reset()
+    statusEl.textContent = 'Grazie, messaggio inviato. Ti rispondo entro 24 ore.'
+    statusEl.classList.add('is-success')
+  } catch (err) {
+    console.error('Contact form: EmailJS send failed', err && err.status, err && err.text, err)
+    statusEl.textContent = 'Invio non riuscito. Riprova più tardi o scrivimi a enricobergamini@outlook.it.'
+    statusEl.classList.add('is-error')
+  } finally {
     submitBtn.disabled = false
     submitBtn.textContent = 'Invia richiesta'
-    form.reset()
-    statusEl.textContent = '✓ Grazie! Messaggio ricevuto (demo). Ti risponderò entro 24 ore.'
-    statusEl.classList.add('is-success')
-  }, 1100)
+  }
 })
