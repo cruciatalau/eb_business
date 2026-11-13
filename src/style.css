@@ -664,6 +664,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   letter-spacing: -0.025em;
 }
 .project p { color: var(--text-dim); margin-bottom: 1.8rem; max-width: 50ch; }
+.project__link { margin: -0.6rem 0 1.8rem; align-self: flex-start; }
 .project__stack {
   display: flex;
   flex-wrap: wrap;

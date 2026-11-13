@@ -21,13 +21,24 @@ npm run preview  # anteprima della build
 
 ```
 index.html             markup e sezioni (hero, about, servizi, progetti, contatti)
+software-gestionale-biomedicale/
+  index.html           pagina prodotto Med Data Hub (/software-gestionale-biomedicale)
 src/style.css          tema, layout responsive, animazioni
 src/main.js            navbar, scroll-reveal, contatori, logica del form
+src/mdh.css            stili della pagina Med Data Hub
+src/mdh.js             pagina Med Data Hub: importa main.js + tab funzioni e zoom screenshot
+public/img/med-data-hub/  screenshot del software (solo dati demo)
 src/scene.js           orchestratore 3D (renderer, bloom, loop, resize)
 src/backgrounds/
   wavegrid.js          sfondo: griglia wireframe synthwave
   shaders.js           noise GLSL condiviso
 ```
+
+## Aggiungere una pagina
+
+Ogni pagina in più è una cartella con il suo `index.html` (es.
+`software-gestionale-biomedicale/index.html`). Va aggiunta a
+`build.rollupOptions.input` in `vite.config.js` e a `public/sitemap.xml`.
 
 ## Personalizzazione rapida
 
