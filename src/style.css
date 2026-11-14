@@ -664,6 +664,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   letter-spacing: -0.025em;
 }
 .project p { color: var(--text-dim); margin-bottom: 1.8rem; max-width: 50ch; }
+.project__link { margin: -0.6rem 0 1.8rem; align-self: flex-start; }
 .project__stack {
   display: flex;
   flex-wrap: wrap;
@@ -751,6 +752,9 @@ main, .nav, .footer { position: relative; z-index: 2; }
 
 .contact__form .btn { margin-top: 0.4rem; padding-block: 0.95rem; }
 
+.form__privacy { color: var(--text-faint); font-size: 0.8rem; text-align: center; }
+.form__privacy a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.form__privacy a:hover { color: var(--accent-2); }
 .form__status { font-size: 0.9rem; min-height: 1.2em; text-align: center; }
 .form__status.is-success { color: var(--accent-2); }
 .form__status.is-error { color: var(--danger); }
