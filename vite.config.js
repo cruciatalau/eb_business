@@ -46,7 +46,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         'software-gestionale-biomedicale': 'software-gestionale-biomedicale/index.html',
-        'med-data-hub': 'med-data-hub/index.html'
+        'med-data-hub': 'med-data-hub/index.html',
+        'privacy-policy': 'privacy-policy/index.html'
       }
     }
   }

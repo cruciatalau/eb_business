@@ -166,7 +166,7 @@ form.addEventListener('submit', async (e) => {
     statusEl.classList.add('is-success')
   } catch (err) {
     console.error('Contact form: EmailJS send failed', err && err.status, err && err.text, err)
-    statusEl.textContent = 'Invio non riuscito. Riprova più tardi o scrivimi a enricobergamini@outlook.it.'
+    statusEl.textContent = 'Invio non riuscito. Riprova più tardi o scrivimi a info@enricobergamini.eu.'
     statusEl.classList.add('is-error')
   } finally {
     submitBtn.disabled = false
