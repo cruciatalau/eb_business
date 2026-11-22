@@ -172,7 +172,7 @@
   color: var(--text-dim);
   font-size: 0.97rem;
 }
-.checks li strong { color: var(--text); font-weight: 600; }
+.checks li strong { display: block; margin-bottom: 0.2rem; color: var(--text); font-weight: 600; }
 .checks li::before {
   content: "";
   position: absolute;
